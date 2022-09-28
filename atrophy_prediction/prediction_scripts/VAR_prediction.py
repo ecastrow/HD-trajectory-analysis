@@ -123,7 +123,7 @@ def VAR_window_estimation(data, group_analysis, reg_flag,
         Number of window-based estimates to be retrieve by this function
     nsubj_window: int, optional
         Number of subjects retrieved per window estimation
-    fixed_stride_control: int, optional
+    fixed_stride: int, optional
         Defines the stride for window-based estimates. Only applicable for
         controls (for patients windows are defined by increments in CAG repeats)
     method: str, optional
@@ -141,8 +141,8 @@ def VAR_window_estimation(data, group_analysis, reg_flag,
     -------
     VAR_point_windows: pandas DataFrame
         Dataframe with VAR parameters for each variable of interest across
-        windows. It also includes the mean value of the RV for the subjects in
-        each subgroup and the number of subjects in them
+        windows. It also includes the mean CAG repeats value for the subjects
+        in each subgroup and the number of subjects in them
     """
     indep_var = 'follup_visit'
     VAR_point_windows = pd.DataFrame(index=range(n_windows))
@@ -364,7 +364,7 @@ def predict_test_vols_VAR(test_real_vol_df, VAR_subj_test, regions):
     
     Parameters
     ----------
-    test_real_trajec_df: pandas DataFrame
+    test_real_vol_df: pandas DataFrame
         Dataframe with actual time series information of variables of interest
         for subjects in the test set. It includes an index for the temporal
         order of the time points (follup_visit) and its associated subject IDs
@@ -376,7 +376,7 @@ def predict_test_vols_VAR(test_real_vol_df, VAR_subj_test, regions):
     
     Returns
     -------
-    test_est_trajec_df: pandas DataFrame
+    test_est_vol_df: pandas DataFrame
         DataFrame with the predicted future values of the variables of interest
         (those occuring after the baseline visit) for subjects in the test set
     """
