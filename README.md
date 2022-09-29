@@ -18,5 +18,5 @@ All the code runs in Python (tested in version 2.7) and requires the following l
 
 ## References
 
-* Castro E., et al. (in press). Predictive Modeling of Huntington's Disease Unfolds Thalamic and Caudate Atrophy Dissociation. Movement Disorders
+* Castro E., et al. Predictive Modeling of Huntington's Disease Unfolds Thalamic and Caudate Atrophy Dissociation. Movement Disorders. 2022
 * Taylor R. PyFlux: An open source time series library for Python. 2017. Available from: https://pyflux.readthedocs.io/  
